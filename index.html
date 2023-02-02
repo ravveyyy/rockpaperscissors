@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+    <div class="main-section">
+        <div class="topContainer">
+            <div class="headingContainer">
+                <div class="heading">
+                    <span>ROCK</span><br />
+                    <span>PAPER</span><br />
+                    <span>SCISSORS</span><br />
+                </div>
+                <div class="score_tile">
+                    <div class="your_score">
+                        YOUR <br />
+                        SCORE
+                    </div>
+                    <div class="score" id="score">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomContainer" id="bottomContainer">
+            <div class="options" id="options">
+                <div class="scissors button" id="scissors">
+                    <img src="images/scissor.png" alt="Scissors Icon" />
+                </div>
+                <div class="rock button" id="rock">
+                    <img src="images/rock.png" alt="Rock Icon" />
+                </div>
+                <div class="paper button" id="paper">
+                    <img src="images/paper.png" alt="Paper Icon" />
+                </div>
+                <div class="tryAgain" id="tryAgain">
+                    <p>TRY AGAIN</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="rulesContainer" id="rule-box">
+        <div class="close" id="closeBtn">X</div>
+        <div class="rule-list">
+            <h2>Game Rules</h2>
+            <ul>
+                <li>
+                    <span>
+                        Rock beats scissors, scissors beat paper, and paper beats rock.
+                    </span>
+                </li> <br>
+                <li>
+                    <span>
+                        Agree ahead of time whether you’ll count off “rock, paper,
+                        scissors, shoot” or just “rock, paper, scissors.”
+                    </span>
+                </li> <br>
+                <li>
+                    <span>
+                        Use rock, paper, scissors to settle minor decisions or simply
+                        play to pass the time
+                    </span>
+                </li> <br>
+                <li>
+                    <span>
+                        If both players lay down the same hand, each player lays down
+                        another hand
+                    </span>
+                </li> <br>
+            </ul>
+        </div>
+    </div>
+    <button class="rules" id="rules">RULES</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

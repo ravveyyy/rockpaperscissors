@@ -1,0 +1,281 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(180deg, #0E1A44 0%, rgba(18, 43, 133, 0.786) 100%);
+    margin: 0;
+    color: #fff;
+    font-family: 'Roboto';
+}
+
+
+img{
+    filter:contrast(100);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+}
+
+.topContainer{
+    padding: 1% 0;
+    margin: 2%;
+}
+
+.headingContainer{
+    width: 90%;
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid white;
+    display: flex;
+    padding: 1%;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+
+.headingContainer > .heading > span{
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+}
+
+
+.headingContainer > .score_tile{
+    background-color: white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 0.5% 3%;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.headingContainer > .score_tile > .your_score{
+    color: #656565;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.headingContainer > .score_tile > .score{
+    color: black;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.main-section{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+.options{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-areas: 
+    "item1 . item2"
+    ". . . "
+    ". item3 .";
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.bottomContainer{
+    margin: auto 0;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 0px 20px gray;
+}
+
+.options2{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 800px;
+    margin: auto auto;
+}
+
+.scissors{
+    grid-area: item1;
+    border: 10px solid #CC00FF;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4% ;
+    min-width: 65px;
+    max-width: 132px;
+    cursor: pointer;
+}
+
+
+.rock{
+    grid-area: item2;
+    background-color: white;
+    border: 10px solid #FFD600;
+    border-radius: 50%;
+    padding: 4% 2%;
+    min-width: 65px;
+    max-width: 132px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.paper{
+    grid-area: item3;
+    background-color: white;
+    border: 10px solid #FF4370;
+    border-radius: 50%;
+    padding: 2%;
+    min-width: 65px;
+    max-width: 132px;
+    cursor: pointer;
+}
+
+
+.rules{
+    font-size: 1rem;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 0.5%;
+    color: white;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    letter-spacing: 0.2rem;
+    background-color: rgba(9,9,121,1);
+    cursor: pointer;
+}
+
+.rules:hover{
+    background-color: rgb(14, 14, 170);
+}
+
+.rulesContainer{
+    background-color: #08143E;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 80%;
+    max-width: 400px;
+    font-size: 1rem;
+    display: none;
+}
+
+@media (max-width: 500px){
+    .rulesContainer{
+        left: 10%;
+    }
+}
+
+.close{
+    color: white;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 2rem;
+    background-color: red;
+    border: 8px solid #465BA7;
+    border-radius: 50%;
+    position: absolute;
+    left: 90%;
+    bottom: 95%;
+    cursor: pointer;
+}
+
+.close:hover{
+    background-color: rgb(251, 120, 120);
+}
+
+
+h2{
+    text-align: center;
+}
+
+.tryAgain{
+    text-align: center;
+    display: none;
+    position: relative;
+    top: 150%;
+    cursor: pointer;
+    transform: translateY(100%);
+}
+.status-text{
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    margin: 2%;
+}
+.result-text{
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    left: 50%;
+    transform: translateY(-45%);
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+.against-pc-text{
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    margin: 2%;
+}
+.rule-list{
+    border: 8px solid #465BA7;
+    border-radius: 15px;
+}
+
+.you-picked{
+    text-align: center;
+}
+
+.pc-picked{
+    text-align: center;
+}
+
+.play-again{
+    background-color: white;
+    color: #656565;
+    font-size: .9rem;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 4% 3%;
+    border: 2px solid white;
+    margin: 4%;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: square;
+}
+
+li{
+    color: #FFD600;
+}
+
+li span{
+    color: white;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .result-text{
+        text-align: center;
+        top: 70%;
+        left: 33%;
+        right: 33%;
+        transform: translateY(-20%);
+    } 
+    .against-pc-text{
+        font-size: 2vh;
+    }
+    .status-text{
+        font-size: 2.5vh;
+    }   
+    .play-again{
+        font-size: 1rem;
+    }
+  }
